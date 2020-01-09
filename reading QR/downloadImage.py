@@ -14,7 +14,9 @@ def getImageUrl(link):
 
 def downloadImage(link):
     imageUrl = getImageUrl(link)
-    urllib.request.urlretrieve(imageUrl, "img.png")    
+    xx = requests.get(imageUrl).content
+    f = open("img.png","wb")
+    f.write(xx)
 
 if __name__=="__main__":
     downloadImage("https://hackattic.com/challenges/reading_qr/problem?access_token=84edafdf68f8408b")
