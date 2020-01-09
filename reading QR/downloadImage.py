@@ -1,4 +1,3 @@
-import urllib
 import requests,json
 
 def getImageUrl(link):
